@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.cart-item{
+    border: 1px solid #000;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+padding: 20px
+}
+.item-name{
+width: 33.33%;
+}
+.item-price{
+width: 33.33%;
+
+
+}
+.item-amount{
+    width: 33.33%;
+
+}

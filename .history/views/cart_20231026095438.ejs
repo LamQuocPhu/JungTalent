@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CART</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-top">
+        <h1>MENU</h1>
+        <button class="cartBtn">
+          <span class="cartBtn-title">Your cart</span>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+      <div class="bg-img"></div>
+      <div class="menu-description-wrapper">
+        <div class="menu-description">
+          <h4>Delicious Food for You</h4>
+          <p>
+            Choose your favorite meal from our broad selection of available
+            meals and enjoy a delicious lunch or dinner at home.
+          </p>
+          <p>
+            All our meals are cooked with high-quality ingredients, just-in-time
+            and of course by experienced chefs!
+          </p>
+        </div>
+      </div>
+    </div>
+    <form action="checkout" method="post">
+      <div class="wrapper">
+        <div class="cart-wrapper">
+          <div class="cart-container">
+            <div class="cart-item">
+              <div class="item-name">
+                <img class="item-img" src="images/Burrito.avif" alt="Burrito" />
+                <span>Burrito</span>
+              </div>
+              <div class="item-price">
+                <span id="price-burrito">$20</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <input type="number" value="1" min="1" max="100" name="burrito" />
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-name">
+                <img
+                  class="item-img"
+                  src="images/ChickenSalad.avif"
+                  alt="Chicken-Salad"
+                />
+                <span>Chicken Salad</span>
+              </div>
+              <div class="item-price">
+                <span id="price-chickensalad">$50</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <input type="number" value="1" min="1" max="100" name="chickensalad" />
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-name">
+                <img
+                  class="item-img"
+                  src="images/ItalianPasta.avif"
+                  alt="Italian-Pasta"
+                />
+                <span>Italian Pasta</span>
+              </div>
+              <div class="item-price">
+                <span id="price-italianpasta">$40</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <input type="number" value="1" min="1" max="100" name="italianpasta" id="" />
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-name">
+                <img
+                  class="item-img"
+                  src="images/PotatoMeat.avif"
+                  alt="Potato-Meat"
+                />
+                <span>Potato Meat</span>
+              </div>
+              <div class="item-price">
+                <span id="price-potatomeat">$65</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <input type="number" value="1" min="1" max="100" name="potatomeat"/>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-name">
+                <img class="item-img" src="images/Steak.avif" alt="Steak" />
+                <span>Steak</span>
+              </div>
+              <div class="item-price">
+                <span id="price-steak">$80</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <input type="number" value="1" min="1" max="100" name="steak" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="Order" />
+    </form>
+
+<script>
+  function calprice(){
+    var priceburrito = document.getElementById("price-burrito");
+    var pricechickensalad = document.getElementById("price-chickensalad");
+    var priceitalianpasta = document.getElementById("price-italianpasta");
+    var pricepotatomeat = document.getElementById("price-potatomeat");
+    var pricesteak = document.getElementById("price-steak");
+
+  }
+</script>
+
+  </body>
+</html>

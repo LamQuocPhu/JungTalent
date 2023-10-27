@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHECK OUT</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://cdn.scalapay.com/in-page-checkout/popup.min.js" type="text/javascript">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>YOUR ORDER</h1>
+      <div class="wrapper">
+        <div class="cart-wrapper">
+          <div class="cart-container">
+            <div class="cart-item">
+              <div class="item-name">
+                <img class="item-img" src="images/Burrito.avif" alt="Burrito" />
+                <span>Burrito</span>
+              </div>
+              <div class="item-price">
+                <span>$20</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <span><%=burrito%></span>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-name">
+                <img
+                  class="item-img"
+                  src="images/ChickenSalad.avif"
+                  alt="Chicken-Salad"
+                />
+                <span>Chicken Salad</span>
+              </div>
+              <div class="item-price">
+                <span>$50</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <span><%=chickensalad%></span>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-name">
+                <img
+                  class="item-img"
+                  src="images/ItalianPasta.avif"
+                  alt="Italian-Pasta"
+                />
+                <span>Italian Pasta</span>
+              </div>
+              <div class="item-price">
+                <span>$40</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <span><%=italianpasta%></span>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-name">
+                <img
+                  class="item-img"
+                  src="images/PotatoMeat.avif"
+                  alt="Potato-Meat"
+                />
+                <span>Potato Meat</span>
+              </div>
+              <div class="item-price">
+                <span>$65</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <span><%=potatomeat%></span>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-name">
+                <img class="item-img" src="images/Steak.avif" alt="Steak" />
+                <span>Steak</span>
+              </div>
+              <div class="item-price">
+                <span>$80</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <span><%=steak%></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="price-total" class="price-total">
+        Total: $255
+      </div>
+      
+    </div>
+  </body>
+</html>

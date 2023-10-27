@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CART</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-top">
+        <h1>MENU</h1>
+        <button class="cartBtn">
+          <span class="cartBtn-title">Your cart</span>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+      <div class="bg-img"></div>
+      <div class="menu-description-wrapper">
+        <div class="menu-description">
+          <h4>Delicious Food for You</h4>
+          <p>
+            Choose your favorite meal from our broad selection of available
+            meals and enjoy a delicious lunch or dinner at home.
+          </p>
+          <p>
+            All our meals are cooked with high-quality ingredients, just-in-time
+            and of course by experienced chefs!
+          </p>
+        </div>
+      </div>
+    </div>
+    <form action="checkout" method="post">
+      <div class="wrapper">
+        <div class="cart-wrapper">
+          <div class="cart-container">
+            <div class="cart-item">
+              <div class="item-name">
+                <img class="item-img" src="images/Burrito.avif" alt="Burrito" />
+                <span>Burrito</span>
+              </div>
+              <div class="item-price">
+                $
+                <span id="price-burrito">20</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <input
+                onchange="calprice()"
+
+                  type="number"
+                  value="1"
+                  min="1"
+                  max="100"
+                  name="burrito"
+                  value = "1"
+                  id="burrito"
+                />
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-name">
+                <img
+                  class="item-img"
+                  src="images/ChickenSalad.avif"
+                  alt="Chicken-Salad"
+                />
+                <span>Chicken Salad</span>
+              </div>
+              <div class="item-price">
+                $
+                <span id="price-chickensalad">50</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <input
+                onchange="calprice()"
+
+                  type="number"
+                  value="1"
+                  min="1"
+                  max="100"
+                  name="chickensalad"
+                  value = "1"
+                  id="chickensalad"
+                />
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-name">
+                <img
+                  class="item-img"
+                  src="images/ItalianPasta.avif"
+                  alt="Italian-Pasta"
+                />
+                <span>Italian Pasta</span>
+              </div>
+              <div class="item-price">
+                $
+                <span id="price-italianpasta">40</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <input
+                onchange="calprice()"
+
+                  type="number"
+                  value="1"
+                  min="1"
+                  max="100"
+                  name="italianpasta"
+                  value = "1"
+                  id="italianpasta"
+                />
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-name">
+                <img
+                  class="item-img"
+                  src="images/PotatoMeat.avif"
+                  alt="Potato-Meat"
+                />
+                <span>Potato Meat</span>
+              </div>
+              <div class="item-price">
+                $
+                <span id="price-potatomeat">65</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <input
+                onchange="calprice()"
+
+                  type="number"
+                  value="1"
+                  min="1"
+                  max="100"
+                  name="potatomeat"
+                  id="potatomeat"
+                  value = "1"
+                />
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="item-name">
+                <img class="item-img" src="images/Steak.avif" alt="Steak" />
+                <span>Steak</span>
+              </div>
+              <div class="item-price">
+                $
+                <span id="price-steak">80</span>
+              </div>
+              <div class="item-amount">
+                <span>Amount:</span>
+                <input
+                onchange="calprice()"
+                  type="number"
+                  value="1"
+                  min="1"
+                  max="100"
+                  name="steak"
+                  id="steak"
+                  value = "1"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span>Total: $</span>
+      <span id="total">0</span>
+
+      </div>
+      <input type="submit" value="Order"/>
+    </form>
+    
+    <script>
+      function calprice() {
+        var total = 0;
+        var price = 0;
+        var priceburrito = document.getElementById("price-burrito").textContent;
+        var pricechickensalad = document.getElementById("price-chickensalad").textContent;
+        var priceitalianpasta = document.getElementById("price-italianpasta").textContent;
+        var pricepotatomeat = document.getElementById("price-potatomeat").textContent;
+        var pricesteak = document.getElementById("price-steak").textContent;
+
+        var priceburritoParse = parseInt(priceburrito);
+        var pricechickensaladParse = parseInt(pricechickensalad);
+        var priceitalianpastaParse = parseInt(priceitalianpasta);
+        var pricepotatomeatParse = parseInt(pricepotatomeat);
+        var pricesteakParse = parseInt(pricesteak);
+
+        var burrito = document.getElementById("burrito").value;
+        var chickensalad = document.getElementById("chickensalad").value;
+        var italianpasta = document.getElementById("italianpasta").value;
+        var potatomeat = document.getElementById("potatomeat").value;
+        var steak = document.getElementById("steak").value;
+        
+
+        var burritoParse = parseInt(burrito);
+        var chickensaladParse = parseInt(chickensalad);
+        var italianpastaParse = parseInt(italianpasta);
+        var potatomeatParse = parseInt(potatomeat);
+        var steakParse = parseInt(steak);
+
+        var burritosubtotal = burritoParse*priceburritoParse;
+        var chickensaladsubtotal = chickensaladParse*pricechickensaladParse;
+        var italianpastasubtotal = italianpastaParse*priceitalianpastaParse;
+        var potatomeatsubtotal = potatomeatParse*pricepotatomeatParse;
+        var steaksubtotal = steakParse*pricesteakParse;
+        
+        document.getElementById("total").innerText = burritosubtotal + chickensaladsubtotal + italianpastasubtotal + potatomeatsubtotal + steaksubtotal;
+      }
+    </script>
+  </body>
+</html>
